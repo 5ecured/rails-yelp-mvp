@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1>List of all restaurants</h1>
+      <ol>
+          <% @restaurants.each do |restaurant| %> <!--ofc you pass the restaurant to below -->
+            <li><%= link_to "#{restaurant.name} -- #{restaurant.address}", restaurant_path(restaurant) %></li>
+          <% end %>
+      </ol>
+    </div>
+  </div>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <%= link_to "Add a restaurant", new_restaurant_path %> <!--as always, when doing linking/routes, look at rails routes-->
+    </div>
+</div>

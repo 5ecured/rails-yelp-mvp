@@ -1,0 +1,16 @@
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number%>
+  <%= f.input :category%>
+  <%= f.submit "add a review", class: "btn btn-primary" %>
+<% end %>
+
+<%= render 'form' %>  <!--this 'form' refers to whatever the partial name is, minus the _ -->
+
+<%= render 'goback' %>
+
+<!--
+line 1: the @restaurant is from the 'new' method in restaurant controller
+simple form is smart. if the id does not exist will create. if it does will update.
+-->
